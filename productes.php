@@ -18,6 +18,12 @@ $productes = array(
         "nom" => "Cireres",
         "imatge" => "https://etselquemenges.cat/wp-content/media/2012/05/cireres-600.gif",
         "preu" => 15.79
+    ),
+
+    array(
+        "nom" => "Peres",
+        "imatge" => "https://etselquemenges.cat/wp-content/media/2012/05/cireres-600.gif",
+        "preu" => 18
     )
 );
 
@@ -26,8 +32,24 @@ print_r($productes);
 echo("-->");
 
 // foreach
+?>
+<table border = "1">
 
+<?php
+  foreach($productes as $producteActual) {
+?>
+  <tr>
+  <td><?=$producteActual['nom']?></td>
+  <td><img src='<?=$producteActual['imatge']?>'></td> 
+  <td><?=$producteActual['preu']?>€</td>
+</tr>
 
+<?php
+  }
+?>
+</table>
+
+<?php
 echo("</BODY>");
 echo("</HTML>");
 ?>
